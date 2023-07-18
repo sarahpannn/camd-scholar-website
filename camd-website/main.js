@@ -7,7 +7,7 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 const scene = new THREE.Scene();
 
 // Create a torus knot
-const geometry = new THREE.TorusKnotGeometry(2.5, 1, 150, 16, 4, 5);
+const geometry = new THREE.TorusKnotGeometry(2.7, 1, 150, 16, 4, 5);
 // const geometry = new THREE.SphereGeometry(3, 64, 64);
 
 // This hex code represents a vibrant magenta color and can be seen as a 
@@ -80,3 +80,19 @@ const tl = gsap.timeline({defaults: {durations : 1}});
 tl.fromTo(mesh.scale, {x: 0, y: 0, z: 0}, {x: 1, y: 1, z: 1})
 tl.fromTo('nav', {y:"-100%"}, {y:"0%"})
 tl.fromTo(".title", {opacity:0}, {opacity:1})
+tl.fromTo(".subtitle", {opacity:0}, {opacity:1})
+
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+})
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+

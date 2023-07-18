@@ -7,6 +7,7 @@
 body, html {
   overflow-x: hidden;
   font-family: 'Work Sans', sans-serif;
+  background-color: black;
 }
 
 .webgl {
@@ -38,6 +39,7 @@ nav ul {
 }
 
 .title{
+  white-space: nowrap;
   color: white;
   z-index: 2;
   position: absolute;
@@ -45,9 +47,11 @@ nav ul {
   left: 50%;
   top: 85%;
   transform: translate(-50%, -25%);
+  border-bottom: 1cm;
 }
 
 .subtitle{
+  white-space: nowrap;
   color: white;
   z-index: 2;
   position: absolute;
@@ -55,4 +59,74 @@ nav ul {
   left: 50%;
   top: 93%;
   transform: translate(-50%, -25%);
+}
+
+.callout {
+  color: #FF00FF;
+  z-index: 2;
+  position: absolute;
+  font-size: 4rem;
+  left: 20%;
+  top: 130%;
+  transform: translate(-50%, -25%);
+}
+
+.callout-shadow-1 {
+  color: rgba(255, 0, 255, 0.5);
+  z-index: 2;
+  position: absolute;
+  font-size: 4rem;
+  left: 20.2%;
+  top: 130.2%;
+  transform: translate(-50%, -25%);
+}
+
+.callout-shadow-2 {
+  color: rgba(255, 0, 255, 0.2);
+  z-index: 2;
+  position: absolute;
+  font-size: 4rem;
+  left: 20.5%;
+  top: 130.5%;
+  transform: translate(-50%, -25%);
+}
+
+.color-explanation {
+  text-align: right;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  font-size: 1.3rem;
+  left: 20%;
+  right: 10%;
+  top: 142%;
+}
+
+.attribution {
+  text-align: right;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  font-size: 0.85rem;
+  left: 50%;
+  right: 10%;
+  top: 160%;
+}
+
+.scrollable-content{
+  height: 500vh;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 3s;
+}
+
+.faster-hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
 }
