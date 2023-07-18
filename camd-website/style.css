@@ -92,6 +92,7 @@ nav ul {
 }
 
 .color-explanation {
+  margin-bottom: 10px;
   text-align: right;
   color: white;
   z-index: 2;
@@ -103,14 +104,15 @@ nav ul {
 }
 
 .attribution {
+  margin-top: 10px;
   text-align: right;
-  color: white;
+  color: rgba(255, 255, 255, 0.816);
   z-index: 2;
   position: absolute;
   font-size: 0.85rem;
   left: 50%;
   right: 10%;
-  top: 160%;
+  top: 156%;
 }
 
 .scrollable-content{
