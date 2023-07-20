@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    font-family: 'Work Sans', sans-serif;
+    background-color: black;
+}
+
+.webgl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav {
+    color: white;
+    z-index: 2;
+    position: relative;
+    padding: 3.4rem 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: flex;
+    display: flex;
+    gap: 4rem;
+}
+
+.title {
+    white-space: nowrap;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    font-size: 3rem;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -25%);
+    border-bottom: 1cm;
+}
+
+.subtitle {
+    white-space: nowrap;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    font-size: 1.3rem;
+    left: 50%;
+    top: 93%;
+    transform: translate(-50%, -25%);
+}
+
+.callout {
+    color: #FF00FF;
+    z-index: 2;
+    position: absolute;
+    font-size: 4rem;
+    left: 20%;
+    top: 130%;
+    transform: translate(-50%, -25%);
+}
+
+.callout-shadow-1 {
+    color: rgba(255, 0, 255, 0.5);
+    z-index: 2;
+    position: absolute;
+    font-size: 4rem;
+    left: 20.2%;
+    top: 130.2%;
+    transform: translate(-50%, -25%);
+}
+
+.callout-shadow-2 {
+    color: rgba(255, 0, 255, 0.2);
+    z-index: 2;
+    position: absolute;
+    font-size: 4rem;
+    left: 20.5%;
+    top: 130.5%;
+    transform: translate(-50%, -25%);
+}
+
+.color-explanation {
+    margin-bottom: 10px;
+    text-align: right;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    font-size: 1.3rem;
+    left: 20%;
+    right: 10%;
+    top: 142%;
+}
+
+.attribution {
+    margin-top: 10px;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.816);
+    z-index: 2;
+    position: absolute;
+    font-size: 0.85rem;
+    left: 50%;
+    right: 10%;
+    top: 156%;
+}
+
+.scrollable-content {
+    height: 500vh;
+}
+
+.divider {
+    top: 109%;
+    color: white;
+    font-size: 2.5rem;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+}
+
+.divider-2 {
+    top: 185%;
+    color: white;
+    font-size: 2.5rem;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 3s;
+}
+
+.faster-hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}

@@ -119,6 +119,24 @@ nav ul {
   height: 500vh;
 }
 
+.divider {
+  top: 109%;
+  color: white;
+  font-size: 2.5rem;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+}
+
+.divider-2 {
+    top: 185%;
+    color: white;
+    font-size: 2.5rem;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+}
+
 .hidden {
   opacity: 0;
   transition: all 3s;
