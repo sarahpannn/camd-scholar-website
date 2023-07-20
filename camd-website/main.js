@@ -81,11 +81,13 @@ tl.fromTo(mesh.scale, {x: 0, y: 0, z: 0}, {x: 1, y: 1, z: 1})
 tl.fromTo('nav', {y:"-100%"}, {y:"0%"})
 tl.fromTo(".title", {opacity:0}, {opacity:1})
 tl.fromTo(".subtitle", {opacity:0}, {opacity:1})
+tl.fromTo(".down-arrow", {opacity:0}, {opacity:1})
 
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach((entry) => {
     if(entry.isIntersecting) {
+      console.log('intersecting');
       entry.target.classList.add('show');
     } else {
       entry.target.classList.remove('show');
@@ -95,4 +97,5 @@ const observer = new IntersectionObserver(entries => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-
+const hiddenElementsTwo = document.querySelectorAll('.dialogue-hidden');
+hiddenElementsTwo.forEach((el) => observer.observe(el));

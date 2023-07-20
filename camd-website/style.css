@@ -6,8 +6,10 @@
 
 body, html {
   overflow-x: hidden;
+  /* overflow: hidden; */
   font-family: 'Work Sans', sans-serif;
   background-color: black;
+  overscroll-behavior-y: none;
 }
 
 .webgl {
@@ -116,7 +118,7 @@ nav ul {
 }
 
 .scrollable-content{
-  height: 500vh;
+  height: 265vh;
 }
 
 .divider {
@@ -125,7 +127,9 @@ nav ul {
   font-size: 2.5rem;
   z-index: 2;
   position: absolute;
+  transform: translate(-50%);
   left: 50%;
+  /* right: 50%; */
 }
 
 .divider-2 {
@@ -134,7 +138,9 @@ nav ul {
     font-size: 2.5rem;
     z-index: 2;
     position: absolute;
+    transform: translate(-50%);
     left: 50%;
+    /* right:50%; */
 }
 
 .hidden {
@@ -142,11 +148,108 @@ nav ul {
   transition: all 3s;
 }
 
-.faster-hidden {
+.show {
+  opacity: 1;
+}
+
+.scroll-text {
+  color: white;
+  position: absolute;
+  z-index: 2;
+  top: 92.5%;
+  left: 89%;
+  right: 1%;
+  font-size: 0.7rem;
+}
+
+.down-arrow {
+  color: white;
+  position: absolute;
+  top: 90%;
+  left: 95%;
+  z-index: 2;
+  width: 0;
+  height: 33px;
+  border: 2px solid;
+  border-radius: 1px;
+  animation: jumpInfinite 1.5s infinite;
+}
+
+.down-arrow:after {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-radius: 4px;
+  transform: rotateZ(45deg);
+}
+
+@keyframes jumpInfinite {
+  0% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: 20px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+.dialogue-1 {
+  white-space: nowrap;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  font-size: 3rem;
+  left: 20%;
+  top: 200%;
+  transform: translate(-50%);
+  border-bottom: 1cm;
+}
+
+.dialogue-2 {
+  white-space: nowrap;
+  color: red;
+  z-index: 2;
+  position: absolute;
+  font-size: 3rem;
+  right: 3%;
+  top: 210%;
+  transform: translate(-50%);
+  border-bottom: 1cm;
+  animation: color-change 5s infinite;
+}
+
+.dialogue-hidden {
   opacity: 0;
-  transition: all 1s;
+  transition: all 5s;
 }
 
 .show {
   opacity: 1;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+@keyframes color-change {
+  0% {
+    color: red;
+  }
+
+  50% {
+    color: blue;
+  }
+
+  100% {
+    color: magenta;
+  }
 }
