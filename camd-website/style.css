@@ -12,6 +12,11 @@ body, html {
   overscroll-behavior-y: none;
 }
 
+.intro {
+  height: 100%;
+  width: 100%;
+}
+
 .webgl {
   position: absolute;
   top: 0;

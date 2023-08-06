@@ -49,8 +49,6 @@ nav ul {
     top: 20%;
     transform: translate(-50%, -25%);
     border-bottom: 1cm;
-    text-decoration: #FF00FF wavy underline;
-    text-decoration-skip-ink: none;
 }
 
 .subtitle {
@@ -152,47 +150,4 @@ nav ul {
 
 .show {
     opacity: 1;
-}
-
-.menu-container {
-    display: grid;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    margin-top: 10rem;
-}
-
-.menu-item {
-    padding: 20px;
-    background-color: black;
-    /* Change the background color as desired */
-    text-align: center;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-
-    position: relative;
-        /* Needed to position the pseudo-element */
-}
-
-/* Add hover effect to highlight the menu items */
-/* .menu-item:hover {
-    background-color: #ff00ff54;
-    /* Change the hover background color as desired 
-} */ 
-
-.underline {
-    background:
-        linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0)),
-        linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 255, 1), rgba(0, 100, 200, 1));
-    background-size: 100% 0.1em, 0 0.1em;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms;
-}
-
-.underline:hover,
-.underline:focus {
-    background-size: 0 0.1em, 100% 0.1em;
 }
